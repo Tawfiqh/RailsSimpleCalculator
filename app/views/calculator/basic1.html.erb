@@ -1,0 +1,32 @@
+
+<div class="calculator_body">
+
+  <%= form_for :calculator, url: { action: :string_process }, method: :post, remote: true do |f|   %>
+    <%= text_field :calculator_display, params[:a], value: @result, readonly: true%>
+
+    <div class="button_pad">
+
+      <div class="number_buttons button_grid">
+        <% (0..9).to_a.each do |i| %>
+          <%= button_tag i.to_s, :type => 'button', class:"calculator-button button-number #{'zero-button' if i == 0}" %>
+        <% end %>
+        <%= button_tag "AC", :type => 'button', class:"calculator-button ac-button button-function button-second-function" %>
+        <%= f.submit '=', class: "calculator-button submit equals-button button-function button-second-function" %>
+        <%= button_tag '<', class: "calculator-button backspace-button button-function button-second-function" %>
+
+      </div>
+
+      <div class="function_buttons button_grid">
+        <% ["+","-","x","÷","^"].each do |i| %>
+          <%= button_tag i.to_s, :type => 'button', class:"calculator-button button-function" %>
+        <% end %>
+      </div>
+
+
+
+
+    </div>
+
+  <% end %>
+
+</div>

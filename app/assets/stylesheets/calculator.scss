@@ -1,0 +1,103 @@
+// Place all the styles related to the Calculator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.calculator_body{
+  width: 400px;
+  margin: 50px auto 0;
+  border: 5px double white;
+  border-radius: 15px;
+  padding: 20px 45px;
+  position: relative;
+}
+
+#calculator_display_{
+  width: 100%;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 2.3em;
+  border-radius: 15px;
+  font-family: 'Cutive Mono', monospace;
+  background: rgba(255, 255, 255, 0.1);
+
+  // padding: 15px 15px;
+  margin: 10px -5px 40px;
+  position: relative;
+  padding: 15px 0px
+
+}
+
+// Button grids
+//================
+.button_pad{
+  display: grid;
+  grid-gap: 20px 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "number number number function"
+}
+
+.button_grid{
+  display: grid;
+  grid-auto-rows: 80px;
+  grid-gap: 2px 2px;
+}
+
+.number_buttons{
+  grid-area: number;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.function_buttons{
+  grid-area: function;
+}
+
+
+// Button styling
+//================
+
+.calculator-button{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 36px;
+}
+
+
+.zero-button{
+  grid-column: 2 / 3;
+  grid-row: 5 / 5;
+}
+
+.ac-button{
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+}
+
+.equals-button{
+  grid-column: 2 / 4;
+  grid-row: 1 / 1;
+}
+
+.backspace-button{
+  grid-column: 3 / 4;
+  grid-row: 5 / 5;
+
+}
+
+.button-function{
+  background: #FFB75E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ed9b05, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #edc70c, #ffee71)
+}
+
+.button-second-function{
+
+  color: white;
+  background: #fe8c00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
